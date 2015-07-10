@@ -18,7 +18,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-Plugin 'jpalardy/vim-slime'
 Plugin 'mattn/emmet-vim'
 Plugin 'Shougo/unite.vim' 
 Plugin 'Shougo/vimfiler'
@@ -81,6 +80,3 @@ endif
 
 " vimfiler settings
 let g:vimfiler_as_default_explorer = 1
-
-" tmux settings
-let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
