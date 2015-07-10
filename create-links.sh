@@ -4,3 +4,4 @@
 DOTFILES=$(pwd)
 ln -s $DOTFILES/.tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/.vimrc ~/.vimrc
+ln -s $DOTFILES/.vimrc ~/.nvimrc
