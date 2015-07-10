@@ -83,8 +83,11 @@ set autowriteall " save buffer when switching away from it
 " Make arrowkey resize viewports {{{
 nnoremap <Left> :vertical resize +1<CR>
 nnoremap <Right> :vertical resize -1<CR>
-nnoremap <Up> :resize +1<CR>
-nnoremap <Down> :resize -1<CR>
+
+" Remove these because they cause the track pad to inadvertently resize
+"nnoremap <Up> :resize +1<CR>
+"nnoremap <Down> :resize -1<CR>
+"
 nnoremap <C-w><Right> :exe "vertical resize +" . (winwidth(0) * 1/2)<CR>
 nnoremap <C-w><Left> :exe "vertical resize -" . (winwidth(0) * 1/2)<CR>
 nnoremap <C-w><Up> :exe "resize +" . (winheight(0) * 1/2)<CR>
