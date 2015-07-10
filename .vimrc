@@ -2,8 +2,8 @@
 set nocompatible
 filetype off
 if has('win32') || has('win64')
-    set rtp+=~/vimfiles/bundle/vundle/
-    call vundle#rc('$HOME/vimfiles/bundle')
+  set rtp+=~/vimfiles/bundle/vundle/
+  call vundle#rc('$HOME/vimfiles/bundle')
 else
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
