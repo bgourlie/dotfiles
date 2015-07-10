@@ -38,6 +38,35 @@ noremap <silent> <Leader>f :VimFilerBufferDir<CR>
 noremap <silent> <Leader>s :Gstatus<CR>
 noremap <silent> <Leader>p :Gpush<CR>
 
+" Use escape instead of the finger bending default for going into normal
+" mode from terminal mode
+:tnoremap <Esc> <C-\><C-n>
+
+" consistent window navigation for normal mode and terminal
+" mode using alt+hjkl.
+" The weird unicode mappings are equivalent to the preceding mapping,
+" but a hack to make it work on mac.
+
+if has("nvim")
+  :tnoremap <A-h> <C-\><C-n><C-w>h
+  :tnoremap ˙ <C-\><C-n><C-w>h
+  :tnoremap <A-j> <C-\><C-n><C-w>j
+  :tnoremap ∆ <C-\><C-n><C-w>j
+  :tnoremap <A-k> <C-\><C-n><C-w>k
+  :tnoremap ˚ <C-\><C-n><C-w>k
+  :tnoremap <A-l> <C-\><C-n><C-w>l
+  :tnoremap ¬ <C-\><C-n><C-w>l
+endif
+
+:nnoremap <A-h> <C-w>h
+:nnoremap ˙ <C-w>h
+:nnoremap <A-j> <C-w>j
+:nnoremap ∆ <C-w>j
+:nnoremap <A-k> <C-w>k
+:nnoremap ˚ <C-w>k
+:nnoremap <A-l> <C-w>l
+:nnoremap ¬ <C-w>l
+
 set number
 set autoindent
 set autoread
