@@ -46,9 +46,8 @@ noremap <silent> <Leader>p :Gpush<CR>
 " but a hack to make it work on mac.
 
 if has("nvim")
-  " Use escape instead of the finger bending default for going into normal
-  " mode from terminal mode
-  :tnoremap <Esc> <C-\><C-n>
+  " Simplify mapping to enter normal mode from term mode 
+  :tnoremap <C-\><C-\> <C-\><C-n>
 
   :tnoremap <A-h> <C-\><C-n><C-w>h
   :tnoremap ˙ <C-\><C-n><C-w>h
