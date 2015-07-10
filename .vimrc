@@ -29,6 +29,7 @@ Plugin 'szw/vim-ctrlspace'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-obsession'
 Plugin 'rust-lang/rust.vim'
+Plugin 'airblade/vim-gitgutter'
 
 filetype plugin indent on
 " }}} 
