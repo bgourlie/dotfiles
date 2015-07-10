@@ -39,9 +39,6 @@ noremap <silent> <Leader>f :VimFilerBufferDir<CR>
 noremap <silent> <Leader>s :Gstatus<CR>
 noremap <silent> <Leader>p :Gpush<CR>
 
-" Use escape instead of the finger bending default for going into normal
-" mode from terminal mode
-:tnoremap <Esc> <C-\><C-n>
 
 " consistent window navigation for normal mode and terminal
 " mode using alt+hjkl.
@@ -49,6 +46,10 @@ noremap <silent> <Leader>p :Gpush<CR>
 " but a hack to make it work on mac.
 
 if has("nvim")
+  " Use escape instead of the finger bending default for going into normal
+  " mode from terminal mode
+  :tnoremap <Esc> <C-\><C-n>
+
   :tnoremap <A-h> <C-\><C-n><C-w>h
   :tnoremap ˙ <C-\><C-n><C-w>h
   :tnoremap <A-j> <C-\><C-n><C-w>j
