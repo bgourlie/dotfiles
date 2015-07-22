@@ -12,7 +12,6 @@ endif
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-sensible'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'mattn/emmet-vim'
