@@ -19,7 +19,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/emmet-vim'
 Plugin 'Shougo/unite.vim' 
 Plugin 'Shougo/vimfiler'
-Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/html5.vim'
@@ -37,7 +36,6 @@ noremap <silent> <Leader>f :VimFilerBufferDir<CR>
 noremap <silent> <Leader>s :Gstatus<CR>
 noremap <silent> <Leader>p :Gpush<CR>
 
-
 " consistent window navigation for normal mode and terminal
 " mode using alt+hjkl.
 " The weird unicode mappings are equivalent to the preceding mapping,
@@ -46,7 +44,6 @@ noremap <silent> <Leader>p :Gpush<CR>
 if has("nvim")
   " Simplify mapping to enter normal mode from term mode 
   :tnoremap <C-\><C-\> <C-\><C-n>
-
   :tnoremap <A-h> <C-\><C-n><C-w>h
   :tnoremap ˙ <C-\><C-n><C-w>h
   :tnoremap <A-j> <C-\><C-n><C-w>j
@@ -67,10 +64,7 @@ endif
 :nnoremap ¬ <C-w>l
 
 set number
-set autoindent
 set autoread
-set backspace=indent,eol,start   
-set incsearch
 set ignorecase
 set smartcase
 set nobackup
@@ -78,6 +72,7 @@ set noswapfile
 set noerrorbells
 set nowrap
 set autowriteall " save buffer when switching away from it
+set hidden
 
 " Make arrowkey resize viewports {{{
 nnoremap <Left> :vertical resize +1<CR>
@@ -109,5 +104,28 @@ if has("gui_running")
 endif
 " }}} 
 
+" highlight column 80
+highlight ColorColumn ctermbg=black
+let &colorcolumn="81,".join(range(120,999),",")
+
 " vimfiler settings
 let g:vimfiler_as_default_explorer = 1
+
+"" Colors of CtrlSpace for Solarized Dark
+" (MacVim and Console Vim under iTerm2 with Solarized Dark theme)
+
+" Based on Solarized TablineSel
+hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
+
+" Based on Solarized Tabline/TablineFill
+" original Normal
+" hi CtrlSpaceNormal   guifg=#839496 guibg=#073642 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+" tweaked Normal with darker background in Gui
+hi CtrlSpaceNormal   guifg=#839496 guibg=#021B25 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+
+" Based on Title
+hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
+
+" Based on PmenuThumb
+hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
+
