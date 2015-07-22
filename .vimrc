@@ -32,6 +32,10 @@ filetype plugin indent on
 " }}} 
 
 :let mapleader="\<space>" " map <Leader> to space
+
+" easier ex commands
+nmap ; :
+
 noremap <silent> <Leader>f :VimFilerBufferDir<CR>
 noremap <silent> <Leader>s :Gstatus<CR>
 noremap <silent> <Leader>p :Gpush<CR>
