@@ -15,7 +15,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
 Plugin 'mattn/emmet-vim'
 Plugin 'Shougo/unite.vim' 
 Plugin 'Shougo/vimfiler'
@@ -37,8 +36,6 @@ filetype plugin indent on
 nmap ; :
 
 noremap <silent> <Leader>f :VimFilerBufferDir<CR>
-noremap <silent> <Leader>s :Gstatus<CR>
-noremap <silent> <Leader>p :Gpush<CR>
 
 " consistent window navigation for normal mode and terminal
 " mode using alt+hjkl.
