@@ -15,8 +15,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'mattn/emmet-vim'
-Plugin 'Shougo/unite.vim' 
-Plugin 'Shougo/vimfiler'
+" Plugin 'Shougo/unite.vim' 
+" Plugin 'Shougo/vimfiler'
 Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/html5.vim'
@@ -34,7 +34,7 @@ filetype plugin indent on
 " easier ex commands
 nmap ; :
 
-noremap <silent> <Leader>f :VimFilerBufferDir<CR>
+" noremap <silent> <Leader>f :VimFilerBufferDir<CR>
 
 " consistent window navigation for normal mode and terminal
 " mode using alt+hjkl.
@@ -73,6 +73,7 @@ set noerrorbells
 set nowrap
 set autowriteall " save buffer when switching away from it
 set hidden
+set autochdir
 
 " Make arrowkey resize viewports {{{
 nnoremap <Left> :vertical resize +1<CR>
@@ -86,6 +87,10 @@ nnoremap <C-w><Right> :exe "vertical resize +" . (winwidth(0) * 1/2)<CR>
 nnoremap <C-w><Left> :exe "vertical resize -" . (winwidth(0) * 1/2)<CR>
 nnoremap <C-w><Up> :exe "resize +" . (winheight(0) * 1/2)<CR>
 nnoremap <C-w><Down> :exe "resize -" . (winheight(0) * 1/2)<CR>
+
+" todo: make this specific to rust files
+nnoremap <leader>t :term cargo test<CR>
+
 " }}}
 
 " Look and feel {{{
@@ -109,23 +114,26 @@ highlight ColorColumn ctermbg=black
 let &colorcolumn="81,".join(range(120,999),",")
 
 " vimfiler settings
-let g:vimfiler_as_default_explorer = 1
+" let g:vimfiler_as_default_explorer = 1
 
 "" Colors of CtrlSpace for Solarized Dark
 " (MacVim and Console Vim under iTerm2 with Solarized Dark theme)
 
 " Based on Solarized TablineSel
-hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
+hi CtrlSpaceSelected ctermfg=10 ctermbg=7 cterm=reverse,bold
 
 " Based on Solarized Tabline/TablineFill
 " original Normal
 " hi CtrlSpaceNormal   guifg=#839496 guibg=#073642 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
 " tweaked Normal with darker background in Gui
-hi CtrlSpaceNormal   guifg=#839496 guibg=#021B25 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+hi CtrlSpaceNormal ctermfg=12 ctermbg=0 cterm=NONE
 
 " Based on Title
-hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
+hi CtrlSpaceSearch ctermfg=9 ctermbg=NONE term=bold cterm=bold
 
 " Based on PmenuThumb
-hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
+hi CtrlSpaceStatus term=reverse cterm=reverse ctermfg=12 ctermbg=8
 
+" make the current window more obvious
+hi StatusLine   ctermfg=15 ctermbg=240 cterm=bold
+hi StatusLineNC ctermfg=245 ctermbg=237 cterm=none
