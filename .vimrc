@@ -137,3 +137,6 @@ hi CtrlSpaceStatus term=reverse cterm=reverse ctermfg=12 ctermbg=8
 " make the current window more obvious
 hi StatusLine   ctermfg=15 ctermbg=240 cterm=bold
 hi StatusLineNC ctermfg=245 ctermbg=237 cterm=none
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
