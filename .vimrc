@@ -25,6 +25,7 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-obsession'
 Plugin 'rust-lang/rust.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Kazark/vim-SimpleSmoothScroll'
 
 filetype plugin indent on
 " }}} 
