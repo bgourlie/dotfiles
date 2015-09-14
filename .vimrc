@@ -1,31 +1,24 @@
-" # Vundle config {{{ 
+" # Plugin config {{{
 set nocompatible
 filetype off
-if has('win32') || has('win64')
-  set rtp+=~/vimfiles/bundle/vundle/
-  call vundle#rc('$HOME/vimfiles/bundle')
-else
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-endif
- 
-Plugin 'gmarik/vundle'
-Plugin 'tpope/vim-sensible'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'mattn/emmet-vim'
-" Plugin 'Shougo/unite.vim' 
-" Plugin 'Shougo/vimfiler'
-Plugin 'pangloss/vim-javascript'
-Plugin 'groenewege/vim-less'
-Plugin 'othree/html5.vim'
-Plugin 'szw/vim-ctrlspace'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-obsession'
-Plugin 'rust-lang/rust.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Kazark/vim-SimpleSmoothScroll'
+
+call plug#begin('~/.vim/plugged')
+Plug 'gmarik/vundle'
+Plug 'tpope/vim-sensible'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'groenewege/vim-less'
+Plug 'othree/html5.vim'
+Plug 'szw/vim-ctrlspace'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-obsession'
+Plug 'rust-lang/rust.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'Kazark/vim-SimpleSmoothScroll'
+call plug#end()
 
 filetype plugin indent on
 " }}} 
