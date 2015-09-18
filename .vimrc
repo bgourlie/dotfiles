@@ -3,7 +3,6 @@ set nocompatible
 filetype off
 
 call plug#begin('~/.vim/plugged')
-Plug 'gmarik/vundle'
 Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
@@ -18,6 +17,7 @@ Plug 'tpope/vim-obsession'
 Plug 'rust-lang/rust.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Kazark/vim-SimpleSmoothScroll'
+Plug 'lambdatoast/elm.vim'
 call plug#end()
 
 filetype plugin indent on
