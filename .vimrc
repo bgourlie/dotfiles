@@ -18,6 +18,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Kazark/vim-SimpleSmoothScroll'
 Plug 'lambdatoast/elm.vim'
+Plug 'rking/ag.vim'
 call plug#end()
 
 filetype plugin indent on
