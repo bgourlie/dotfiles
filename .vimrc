@@ -29,7 +29,10 @@ filetype plugin indent on
 " easier ex commands
 nmap ; :
 
-" noremap <silent> <Leader>f :VimFilerBufferDir<CR>
+" integrate ctrl-space and ag (the silver searcher)
+if executable("ag")
+    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
 
 " consistent window navigation for normal mode and terminal
 " mode using alt+hjkl.
@@ -57,6 +60,9 @@ endif
 :nnoremap ˚ <C-w>k
 :nnoremap <A-l> <C-w>l
 :nnoremap ¬ <C-w>l
+
+nmap <Leader>hn <Plug>GitGutterNextHunk
+nmap <Leader>hN <Plug>GitGutterPrevHunk
 
 set number
 set autoread
