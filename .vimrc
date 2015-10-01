@@ -34,6 +34,11 @@ if executable("ag")
     let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 endif
 
+" Save/Load ctrl-space workspace on exit/start
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
+let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
+let g:CtrlSpaceSaveWorkspaceOnExit = 1
+
 " consistent window navigation for normal mode and terminal
 " mode using alt+hjkl.
 " The weird unicode mappings are equivalent to the preceding mapping,
