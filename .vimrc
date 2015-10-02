@@ -1,4 +1,3 @@
-" # Plugin config {{{
 set nocompatible
 filetype off
 
@@ -22,7 +21,9 @@ Plug 'rking/ag.vim'
 call plug#end()
 
 filetype plugin indent on
-" }}} 
+
+" map jk to esc
+inoremap jk <ESC>
 
 :let mapleader="\<space>" " map <Leader> to space
 
@@ -45,26 +46,19 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 " but a hack to make it work on mac.
 
 if has("nvim")
-  " Simplify mapping to enter normal mode from term mode 
-  :tnoremap <C-\><C-\> <C-\><C-n>
-  :tnoremap <A-h> <C-\><C-n><C-w>h
-  :tnoremap ˙ <C-\><C-n><C-w>h
-  :tnoremap <A-j> <C-\><C-n><C-w>j
-  :tnoremap ∆ <C-\><C-n><C-w>j
-  :tnoremap <A-k> <C-\><C-n><C-w>k
-  :tnoremap ˚ <C-\><C-n><C-w>k
-  :tnoremap <A-l> <C-\><C-n><C-w>l
-  :tnoremap ¬ <C-\><C-n><C-w>l
+  " Simplify mapping to enter normal mode from term mode
+  :tnoremap <C-j><C-k> <C-\><C-n>
+  " Switch window mappings
+  :tnoremap <C-h> <C-\><C-n><C-w>h
+  :tnoremap <C-j> <C-\><C-n><C-w>j
+  :tnoremap <C-k> <C-\><C-n><C-w>k
+  :tnoremap <C-l> <C-\><C-n><C-w>l
 endif
 
-:nnoremap <A-h> <C-w>h
-:nnoremap ˙ <C-w>h
-:nnoremap <A-j> <C-w>j
-:nnoremap ∆ <C-w>j
-:nnoremap <A-k> <C-w>k
-:nnoremap ˚ <C-w>k
-:nnoremap <A-l> <C-w>l
-:nnoremap ¬ <C-w>l
+:nnoremap <C-h> <C-w>h
+:nnoremap <C-j> <C-w>j
+:nnoremap <C-k> <C-w>k
+:nnoremap <C-l> <C-w>l
 
 nmap <Leader>hn <Plug>GitGutterNextHunk
 nmap <Leader>hN <Plug>GitGutterPrevHunk
@@ -81,25 +75,14 @@ set autowriteall " save buffer when switching away from it
 set hidden
 set autochdir
 
-" Make arrowkey resize viewports {{{
 nnoremap <Left> :vertical resize +1<CR>
 nnoremap <Right> :vertical resize -1<CR>
 
-" Remove these because they cause the track pad to inadvertently resize
-"nnoremap <Up> :resize +1<CR>
-"nnoremap <Down> :resize -1<CR>
-"
 nnoremap <C-w><Right> :exe "vertical resize +" . (winwidth(0) * 1/2)<CR>
 nnoremap <C-w><Left> :exe "vertical resize -" . (winwidth(0) * 1/2)<CR>
 nnoremap <C-w><Up> :exe "resize +" . (winheight(0) * 1/2)<CR>
 nnoremap <C-w><Down> :exe "resize -" . (winheight(0) * 1/2)<CR>
 
-" todo: make this specific to rust files
-nnoremap <leader>t :term cargo test<CR>
-
-" }}}
-
-" Look and feel {{{
 syntax enable
 set background=dark
 colorscheme solarized
@@ -118,12 +101,6 @@ endif
 " highlight column 80
 highlight ColorColumn ctermbg=black
 let &colorcolumn="81,".join(range(120,999),",")
-
-" vimfiler settings
-" let g:vimfiler_as_default_explorer = 1
-
-"" Colors of CtrlSpace for Solarized Dark
-" (MacVim and Console Vim under iTerm2 with Solarized Dark theme)
 
 " Based on Solarized TablineSel
 hi CtrlSpaceSelected ctermfg=10 ctermbg=7 cterm=reverse,bold
