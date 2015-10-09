@@ -1,0 +1,16 @@
+[
+  {
+    "_comment": "Enter normal mode using ctrl+j, ctrl+k",
+    "keys": ["ctrl+j", "ctrl+k"],
+    "command": "_enter_normal_mode",
+    "args": {"mode": "mode_insert"},
+    "context": [{"key": "vi_insert_mode_aware"}]
+  },
+  {
+    "_comment": "Map ; to : in normal mode",
+    "keys": [";"],
+    "command": "press_key",
+    "args": {"key": ":"},
+    "context": [{"key": "vi_command_mode_aware"}]
+  },
+]
