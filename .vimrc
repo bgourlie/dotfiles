@@ -24,6 +24,7 @@ filetype plugin indent on
 
 " map jk to esc
 inoremap <C-j><C-k> <ESC>
+vnoremap <C-j><C-k> <ESC>
 
 :let mapleader="\<space>" " map <Leader> to space
 
