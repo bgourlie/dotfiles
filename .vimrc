@@ -18,9 +18,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Kazark/vim-SimpleSmoothScroll'
 Plug 'lambdatoast/elm.vim'
 Plug 'rking/ag.vim'
+Plug 'racer-rust/vim-racer'
 call plug#end()
 
 filetype plugin indent on
+
+let g:racer_cmd = "/Users/brian/repos/racer/target/release/racer"
+let $RUST_SRC_PATH="/Users/brian/repos/rust/src/"
 
 " map jk to esc
 inoremap <C-j><C-k> <ESC>
