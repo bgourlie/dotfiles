@@ -3,6 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -18,6 +19,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Kazark/vim-SimpleSmoothScroll'
 Plug 'lambdatoast/elm.vim'
 Plug 'rking/ag.vim'
+Plug 'bling/vim-airline'
 call plug#end()
 
 filetype plugin indent on
