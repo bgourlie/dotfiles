@@ -20,13 +20,14 @@ Plug 'Kazark/vim-SimpleSmoothScroll'
 Plug 'lambdatoast/elm.vim'
 Plug 'rking/ag.vim'
 Plug 'bling/vim-airline'
+Plug 'lepture/vim-velocity'
 call plug#end()
 
 filetype plugin indent on
 
-" map jk to esc
-inoremap <C-j><C-k> <ESC>
-vnoremap <C-j><C-k> <ESC>
+" map c-k to esc
+inoremap <C-k> <ESC>
+vnoremap <C-k> <ESC>
 
 :let mapleader="\<space>" " map <Leader> to space
 
