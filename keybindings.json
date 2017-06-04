@@ -1,0 +1,25 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+k",
+        "command": "extension.vim_escape"
+    },
+    {
+        "key": "ctrl+r r",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    }
+]

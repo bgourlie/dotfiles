@@ -1,0 +1,18 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.fontSize": 14,
+  "editor.rulers": [120],
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+        "before": [":"],
+        "after": [],
+        "commands": [
+            {
+                "command": "workbench.action.showCommands",
+                "args": []
+            }
+        ]
+    }
+],
+"vim.disableAnnoyingNeovimMessage": true
+}
