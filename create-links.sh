@@ -15,4 +15,4 @@ ln -s $DOTFILES/.ideavimrc $HOME/.ideavimrc
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -s $DOTFILES/.vim/autoload $HOME/.config/neovim/autoload
+ln -s $DOTFILES/.vim/autoload $HOME/.config/neovim
