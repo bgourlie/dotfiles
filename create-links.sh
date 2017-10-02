@@ -4,15 +4,15 @@
 DOTFILES=$(pwd)
 
 # Init neovim config
-mkdir -p $HOME/.config/neovim
+mkdir -p $HOME/.config/nvim
 
 ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 ln -s $DOTFILES/.vimrc $HOME/.vimrc
-ln -s $DOTFILES/.vimrc $HOME/.config/neovim/init.vim
+ln -s $DOTFILES/.vimrc $HOME/.config/nvim/init.vim
 ln -s $DOTFILES/.ideavimrc $HOME/.ideavimrc
 #ln -s $DOTFILES/Default.sublime-keymap ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default.sublime-keymap
 
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -s $DOTFILES/.vim/autoload $HOME/.config/neovim
+ln -s $DOTFILES/.vim/autoload $HOME/.config/nvim
