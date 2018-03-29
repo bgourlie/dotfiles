@@ -25,10 +25,6 @@ call plug#end()
 
 filetype plugin indent on
 
-" map c-k to esc
-inoremap <C-k> <ESC>
-vnoremap <C-k> <ESC>
-
 :let mapleader="\<space>" " map <Leader> to space
 
 " easier ex commands
