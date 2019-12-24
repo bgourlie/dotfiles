@@ -1,18 +1,7 @@
-// Place your settings in this file to overwrite the default settings
 {
-  "editor.fontSize": 14,
-  "editor.rulers": [120],
-  "vim.otherModesKeyBindingsNonRecursive": [
-    {
-        "before": [":"],
-        "after": [],
-        "commands": [
-            {
-                "command": "workbench.action.showCommands",
-                "args": []
-            }
-        ]
-    }
-],
-"vim.disableAnnoyingNeovimMessage": true
+    "rust-analyzer.enableEnhancedTyping": false,
+    "files.autoSave": "afterDelay",
+    "telemetry.enableTelemetry": false,
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false
 }

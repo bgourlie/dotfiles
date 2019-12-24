@@ -1,25 +1,76 @@
-// Place your key bindings in this file to overwrite the defaults
+// Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "ctrl+g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-extension.vim_ctrl+g",
+        "when": "editorTextFocus && vim.active && vim.use<C-g> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "down",
+        "command": "-list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
         "key": "ctrl+k",
-        "command": "extension.vim_escape"
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
     },
     {
-        "key": "ctrl+r r",
-        "command": "editor.action.rename",
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+        "key": "up",
+        "command": "-list.focusUp",
+        "when": "listFocus && !inputFocus"
     },
     {
-        "key": "f2",
-        "command": "-editor.action.rename",
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+        "key": "ctrl+k",
+        "command": "-extension.vim_ctrl+k",
+        "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
     },
     {
-        "key": "ctrl+a",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
     {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal"
+        "key": "up",
+        "command": "-selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "down",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-extension.vim_ctrl+j",
+        "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
     }
 ]
