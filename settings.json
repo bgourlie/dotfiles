@@ -3,5 +3,7 @@
     "files.autoSave": "afterDelay",
     "telemetry.enableTelemetry": false,
     "workbench.enableExperiments": false,
-    "workbench.settings.enableNaturalLanguageSearch": false
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false
 }
