@@ -4,7 +4,6 @@ filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
-Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
@@ -85,7 +84,6 @@ nnoremap <C-w><Down> :exe "resize -" . (winheight(0) * 1/2)<CR>
 
 syntax enable
 set background=dark
-colorscheme solarized
 
 if has("gui_running")
   if has("gui_gtk2")
@@ -96,7 +94,6 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
-" }}} 
 
 " highlight column 80
 highlight ColorColumn ctermbg=black
