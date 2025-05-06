@@ -1,0 +1,41 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "VimControl",
+    "bindings": {
+      "ctrl-j": null,
+      "ctrl-k": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-g": null,
+      "ctrl-j": null,
+      "shift shift": "file_finder::Toggle",
+      "ctrl-,": "pane::GoBack",
+      "ctrl-.": "pane::GoForward"
+    }
+  },
+  {
+    "context": "(Editor || ProjectPanel)",
+    "bindings": {
+      "ctrl-g": null,
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-g d": "editor::GoToDeclaration",
+      "ctrl-e r": "editor::Rename"
+    }
+  }
+]
