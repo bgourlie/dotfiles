@@ -20,7 +20,8 @@
       "ctrl-j": null,
       "shift shift": "file_finder::Toggle",
       "ctrl-,": "pane::GoBack",
-      "ctrl-.": "pane::GoForward"
+      "ctrl-.": "pane::GoForward",
+      "ctrl-e t": "workspace::ToggleBottomDock"
     }
   },
   {
