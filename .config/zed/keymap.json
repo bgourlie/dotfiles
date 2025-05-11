@@ -38,5 +38,12 @@
       "ctrl-g d": "editor::GoToDeclaration",
       "ctrl-e r": "editor::Rename"
     }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "ctrl-j": "editor::ContextMenuNext"
+    }
   }
 ]
