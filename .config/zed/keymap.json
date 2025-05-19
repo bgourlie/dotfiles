@@ -21,7 +21,9 @@
       "shift shift": "file_finder::Toggle",
       "ctrl-,": "pane::GoBack",
       "ctrl-.": "pane::GoForward",
-      "ctrl-e t": "workspace::ToggleBottomDock"
+      "ctrl-e t": "workspace::ToggleBottomDock",
+      "ctrl-b |": "pane::SplitVertical",
+      "ctrl-b -": "pane::SplitHorizontal"
     }
   },
   {
@@ -36,6 +38,7 @@
     "context": "Editor",
     "bindings": {
       "ctrl-g d": "editor::GoToDeclaration",
+      "ctrl-g s": "outline::Toggle",
       // TODO: Use this form of 'FindAllReferences' if it ever gets implemented: https://github.com/zed-industries/zed/issues/5117
       "ctrl-g u": "editor::FindAllReferences",
       "ctrl-e r": "editor::Rename"
