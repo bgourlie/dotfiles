@@ -27,7 +27,6 @@
   "tab_bar": {
     "show": false
   },
-  "show_completions_on_input": false,
   "theme": {
     "mode": "system",
     "light": "One Light",
