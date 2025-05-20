@@ -23,7 +23,11 @@
       "ctrl-.": "pane::GoForward",
       "ctrl-e t": "workspace::ToggleBottomDock",
       "ctrl-b |": "pane::SplitVertical",
-      "ctrl-b -": "pane::SplitHorizontal"
+      "ctrl-b -": "pane::SplitHorizontal",
+      "ctrl-d e": "workspace::ToggleRightDock",
+      "ctrl-d s": "workspace::ToggleBottomDock",
+      "ctrl-d w": "workspace::ToggleLeftDock",
+      "ctrl-d c": "workspace::CloseAllDocks"
     }
   },
   {
