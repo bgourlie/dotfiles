@@ -24,6 +24,9 @@
   "buffer_font_size": 14,
   "autosave": "on_focus_change",
   "relative_line_numbers": true,
+  "features": {
+    "edit_prediction_provider": "none"
+  },
   "tab_bar": {
     "show": false
   },
